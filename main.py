@@ -10,6 +10,7 @@ for line in file:
             ipAddresses.append(IpAddress(str.replace(line, '\n', '')))
         except Exception as error:
             print(error)
+file.close()
 print('\nFollowing IPv4 addresses were read:')
 for ipAddress in ipAddresses:
     print("- %s (%s)" % (ipAddress.description(), ipAddress.descriptionByte()))
